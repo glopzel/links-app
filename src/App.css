@@ -1,9 +1,4 @@
 :root {
-  --color-bg: #FFFFA0;
-  --color-text-main: #000000;
-  --color-primary: #AFECE0;
-  --wrapper-height: 85vh;
-  --image-max-width: 320px;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
@@ -27,7 +22,7 @@
 }
 
 
-/* Page structure */
+
 body {
   font-family: HK Grotesk;
   background-color: #bfe3ff;
@@ -40,7 +35,6 @@ body {
   padding: 1vmin;
 /*  background: #ffce2f; */
 }
-
 
 h1 {
   font-family: var(--font-family);
