@@ -1,38 +1,97 @@
-.App {
+:root {
+  --color-bg: #FFFFA0;
+  --color-text-main: #000000;
+  --color-primary: #AFECE0;
+  --wrapper-height: 85vh;
+  --image-max-width: 320px;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+
+/* Page structure */
+body {
+  font-family: HK Grotesk;
+  background-color: #bfe3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: fit-content;
+  padding: 1vmin;
+/*  background: #ffce2f; */
+}
+
+
+h1 {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+main {
+  width: 70vmin;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  display: block;
+  text-decoration: none;
+  padding: 2vmin;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 3vmin;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  list-style: none;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-bottom: 4vmin;
+  box-shadow: 6px 6px 0 black;
+  background: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 2vmin;
+}
+
+@media (min-width: 1000px) {
+  li {
+    box-shadow: 0px 10px 0 transparent;
+    transition: all 0.2s ease-in-out;
   }
-  to {
-    transform: rotate(360deg);
+
+  li:hover {
+    box-shadow: 6px 6px 0 black;
+    transform: translate(-6px, -6px);
   }
 }
+
